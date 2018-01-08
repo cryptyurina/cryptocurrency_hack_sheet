@@ -4,7 +4,7 @@ module Authorization
   CREDENTIALS_PATH = File.join(Dir.home, '.credentials', "cryptocurrency_hack_sheet.yaml")
   SCOPE = Google::Apis::SheetsV4::AUTH_SPREADSHEETS
 
-  def new
+  def self.new
     FileUtils.mkdir_p(File.dirname(CREDENTIALS_PATH))
 
     client_id = Google::Auth::ClientId.from_file(CLIENT_SECRETS_PATH)
@@ -25,5 +25,4 @@ module Authorization
     end
     credentials
   end
-  module_function :new
 end
