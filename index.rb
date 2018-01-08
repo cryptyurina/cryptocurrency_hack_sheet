@@ -17,7 +17,6 @@ APPLICATION_NAME = 'CryptoCurrency Hack Sheet'
 OBJECT_COUNT = 500
 
 service = Google::Apis::SheetsV4::SheetsService.new
-request_body = Google::Apis::SheetsV4::ValueRange.new
 service.client_options.application_name = APPLICATION_NAME
 service.authorization = Authorization.new
 # Prints the names and majors of students in a sample spreadsheet:
